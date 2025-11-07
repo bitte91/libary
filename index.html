@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Minha Biblioteca</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec135b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    /* Adiciona uma transição suave global para elementos animáveis */
+    * {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+  </style>
+  </head>
+  <!-- ... (restante do seu <body> permanece o mesmo) ... -->
+  <body class="bg-background-light dark:bg-background-dark font-display text-[#EAEAEA]">
+  <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+  <header class="sticky top-0 z-20 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 justify-between backdrop-blur-sm">
+  <div class="flex size-10 shrink-0 items-center justify-center text-primary">
+  <span class="material-symbols-outlined !text-3xl">import_contacts</span>
+  </div>
+  <h1 class="text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-zinc-900 dark:text-white">Para Você</h1>
+  <div class="flex items-center gap-2">
+  <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-zinc-900 dark:text-white">
+  <span class="material-symbols-outlined">search</span>
+  </button>
+  <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-zinc-900 dark:text-white">
+  <span class="material-symbols-outlined">account_circle</span>
+  </button>
+  </div>
+  </header>
+  <main class="flex-grow pb-24">
+  <section class="p-4 @container">
+  <div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-lg @xl:flex-row @xl:items-start bg-zinc-800/20 dark:bg-zinc-800/50">
+  <div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover @xl:w-2/3 @xl:aspect-video" data-alt="Cover art for the book The Midnight Library" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4jzx29fmJZolUAwqNeL_PmxFtpP1C63nm7bWPPB5_Aaoq07SXrq4Hl0L8jnbFFIbHu9k3QC6eWuaQ7c6EzJyhSqb4VcGKxgyDuXsxN_fDVDnFHju5bjsigoU7cPfHIQOzasXTGcecjkr0ARWBo621GB1Ijy1gFo9uOL2qJGqcr5WXcAW2hKg3euJAd20C9OWOIL3Y0Y14FzSAmDZCVVEenpNqUqfwRZE_jZ_4rv9hqbPqszFy6pyxlOGVdUadIIVeVnV0hDZKKFch');"></div>
+  <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4 @xl:p-6 @xl:w-1/3">
+  <p class="text-zinc-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">A Biblioteca da Meia-Noite</p>
+  <p class="text-zinc-600 dark:text-zinc-400 text-base font-normal leading-normal">Matt Haig</p>
+  <div class="w-full bg-zinc-600/40 rounded-full h-1.5 my-2">
+  <div class="bg-primary h-1.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <p class="text-zinc-600 dark:text-zinc-400 text-sm font-normal leading-normal">45% Concluído</p>
+  <button class="flex mt-4 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-base font-medium leading-normal gap-2">
+  <span class="material-symbols-outlined !text-xl">play_arrow</span>
+  <span class="truncate">Continuar Lendo</span>
+  </button>
+  </div>
+  </div>
+  </section>
+  <section>
+  <h2 class="text-zinc-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Minha Lista</h2>
+  <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+  <div class="flex items-stretch px-4 gap-4">
+    <!-- Card Atualizado com Animação Melhorada -->
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for Project Hail Mary" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlLYw81IRQSVEZGIZTGdvvm6BZ3ASXWXmFiMVDz0MllKVxOiOqwe59oJc7xenG0Z5OrFlHnb7p_jxRKtaE6MtouC3c04omSOZJJ88UZYFFpfvG-hM5Ye24Yp4YNlgJ5OcIGX2-VCtmi9Zz0L_XMmaa2yAEh0y2RJDD6HKocC2yQM8lseI9vAhz1C5fvqv-Ew-g4QTcYTyImpVBZ7CLOEjq9Ii6C_rrIeUfguIg_GyK7CKXiqS4Fv57_uWPbT00k_0jukD24GhOWKpq');">
+        <!-- Camada escura opcional para efeito de foco no título -->
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <!-- Repita o padrão para os outros cards -->
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for Dune" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuGjrZ5jb_IH0xjlChWfE8mmVDoobikOiqoq6voXmk36cIRsi6gBVu3_C6Cl7ATSGPPgthvlkQm6xOiH775zP2X8S4pBIw3HRvYd9oA0msuap24ywQdLbWZUOqjWQp5NPo1IHI5qnoPhJ_qt0lxvSuSQH05j7P9FUS9A_2mG3qqckYf1bzt62_3Qt0S7B4HYNZoKRmoLyV2JAbgjp2el7SRgUdmNFUqmE-Yf2m5jKBwedbMlFGn07swVsFU1GFvjzOMQTNXEqRVqmq');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for Klara and the Sun" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsIvL-aGj2JcjmXR_Etz_djq-2-H22DB7BUc9wjB9kXfJQO3tPpYjHJCTMStMyrxZuD2WJzBSCZR5wecZIqCcPgrIs9Q25Wsst6TOzm-2lVWusbYAkbPaHo6T2xFCn7AUkuK_Nt2QJ8aXydnjdYx-GtseUKJ0hvn5YPWPpy2ZNibgctQ0xJb4C3g2I4uXjo6F33T6JpytM14sC0S1SYX7fRl3-bpu3EXtJGEktO7vz2ehWaIvAyu7t0Sxmt_4pJBlDh88XNUiOaenk');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for Atomic Habits" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOE8a5faUSQzugAf8-o2KjnlvEFRR7QiYntb4gjfBnsuTWVUKm6ej5AWvNPRBCvpZ_ZDb28x1ezaBxW-6PdfHXCNr9u66-hPuahTQHxc-oWHBVAyDiFc2aEoQOFCADuMWz_Crus9sP5WvH7WVraOX_lYJwoPJWjrMAQzT0zdQlMDCbeIV6YyIVF27vqoDxZbDUZ9FZngrOTzurRkvDn80VYlYXRpR1Hs0HN_xtjl9EiEAVmpS0PTrJVH0nKJStkMNd15s6r9Gqb7mQ');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for Circe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVw4xNF0YME8PWkQUsPgh7DCIBzje9Pw6hxw6ErBmv1V1al4EQlGPzUbBdjhjbA4sNTOWtsvzCb-JQaML3lC8AJgsu-y57AeKf-QZDZHn2Cd2inl0QUCiMUKx_bRM1RdA_kVjcPnsvZXHs71mPMPQhMhicfs5iKJ9Pua00Es-S-aVKKb4-e-t1D-hmkOGnXizseeCdoTHcJHHV1XRbeRD4YcwCqasWT_wrhyZoxP_o1SciSwv13yY_XT1UcGHsrvwacpbSHZb2kMyo');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+  </div>
+  </div>
+  </section>
+  <!-- Repita as outras seções (Recomendações, Adicionados Recentemente) com os mesmos estilos de card acima -->
+  <section>
+  <h2 class="text-zinc-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recomendações Para Você</h2>
+  <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+  <div class="flex items-stretch px-4 gap-4">
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for The Vanishing Half" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwT6e5lN_7-egVtcjRVhKfHM-GbPHfNRDuvqDk4URLcR1ZkxnnkzRVoZhBbqkQa7RXq5yngXMA2qMGWiC_jpLTclArh07CSdBE2Mb6JRAKdUJskPyNpjKU2KCMauojpMh-kGVzBeh7bvY4MJ9NDBqr2Hdn3SRYegI6uvfCenzwDM4hpWYmtM6GDZW43F9TWvWn-ianxCTVRWjBQURDeLfxuyxPlK35vQBw-LZwZxeoGtDseubevAhaxigtB1xXrOfMQs1KU9hyydkl');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for The Four Winds" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvpyCxQiAd6_-mzvllCqIIAbrpXdZh5Pzzc3gjlzcIQIYtLwrYvCs6hKncFdbBVuP58uBicA1eZ8JWn2r4_OFHNhCnRWL_7HxEtGnPJ3MFqKMvOo-aJKRULgQGyI18xLtdQjsMfBXbmfDgGV3NKOJqajWor7dCLzbsdy_iMHtLAwlRp4Bl6ib2Gn3IhLHQmgbz3zddSFuAtIQuAZXcVogL5SbRTixX9ahWGLPlyuAFZedCTxfhAHD5QS2lpExcZ8FbzgrDW77MbA22');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for The Song of Achilles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMdNWVCefRYs9erf5f9loI9tkEpL7SZt5XR8QTbT9J9QtuJBs3lhkIt5LFNH6ngs0deu9t_PTv0EPjLY-wWupPbIL2pbilOT1JWyB5LYhMpIS0oJWsKq4785gfDKoix_6xDivQlSFnZV6VDVFsSIn79F6vj_FuEtBgq6fynjEpUN2iIfXp1OB0XWlzps6a4wghlBgtQ0WW-BOKL6V_wf7osFT6ABJQUO7P9DEw_jKmsAGKyGMAs3GJNR0FOlNSguhHdqEaODOEWHl4');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for Where the Crawdads Sing" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYHkbFHNEjVavy7N7kSPIJx24QtqJzamMhtiIGM37XjYF62DBtYeGaZ3WLpA4Dx-F9j2zuvhjS-7E2-kqDEh1oV59GF9C6-KPGyv2o8ioronWfhFbzIR3YkvpPhh4GTDnr2v3TeV8H0FQJiejYPKmdyb8jC8oRLaxOR-qZTaxXSC9mhHlLNzpZfFIWZoz88uLXuEqotpEKwIa9fZApczyfMm6fgs_MG85w1bXUrtiAM3OwX_mXmR0Xtr5ArQYjm7v1VmgxZ4pcj_tf');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover of a generic classic novel" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAy5_ThMuZo9N-7vY46WdtH5nld6e3OrNFqpjfXazapc3T1eewE2yjD3cutdLr6zTcLKV34DDBNMSA5UDV2NZUjGXI8yLjMZEHXSmqlFFgKQoocgwkcjGz8FYdOOJAFTdsHx1oyNIVYGApb7M05TIlhYrPp3jAPx5yrku1Mh61m7L279O9hFMKMwJ0tbMs9xFOVNlqeodg7PCB21C3QGeex96UDkHMwHs76Gki2ULjlAVN8UdnrhYBl8gNiNtcjmdu6f1CaCjmTLilx');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+  </div>
+  </div>
+  </section>
+  <section>
+  <h2 class="text-zinc-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Adicionados Recentemente</h2>
+  <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+  <div class="flex items-stretch px-4 gap-4">
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for Klara and the Sun" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSS7JgV0wEpbrLZH68HHp-bb4093xSKbwTsHrS3AYnTQwzEEhcMVncERFYpsc6qSZxq-B8GS4QSrVAq0UqA7VYJGp97SiCDfG0e-mc_taFA8d21EmhclvOyeHDMZQl6hBwo9_fnstHljDCwW3yx4JgHhnVrTpcH2rC5GlggaSgOY61UZz01wQjkf8AVHM6AqccjzGq9irIeiFdJrf2Lyijxl4D7warf8YF4OgCzw2hu1Iv_TeyCP2zf1kAprM1lu4aD9dUSamE3Wng');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover of a generic classic novel" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5KRmzdjxQSPAtzPfxPFshDqtVwJxSw_TlN4uGKMiJDFv2CQ4xzkTXYCgZmgu0xEjNaIF5V6dpGFIaQcwKjP3rgIxdSw78Cqw73T5ukFRbg2l_xm-yZV8BcbdRKkONP8qBwkIz5HzLt7DsbD0zxDMWpmLTEamje6etKSzFmkE__uiAypkuEI1-jnbMGgEEPk2jYy_gKBtz5PzyUKwShnQy9uckm5M4VNNF-ktAQ_0Zm8yzRJ46yssVexQXOLOAk6y98gmDFqW_cDZf');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for The Song of Achilles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDeRr3EnKrM85cgT5IUwPHcFybbHuAiz7ojRLohwnMZTKdT0ySIj8rxzv0eMOqKPtTHfaddCesC1i49ZTKyu_MTbiIGEKS6S2fBMVq_8SIqpDBgKwGEyJkb1F-PFlmkEpv9mBsTKhA_UP-RUuN_PbkWz_FmskD35oZ6kVWcH53AWq_895lUAB_gzsSpCXve3dB01RFZ80bTxSAEVAVMoUn7H2jWMfPg821myJHeZx7Y1YEA9aL6z4pXuR3frqm-d2dE5ec82rVaDbxS');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for Dune" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7dkZuXpQC6TbEFR9XP5Bp1wh_NKdNKdWfm3xZ6jCYnXeFdg7kLxGW2p_HzChcRv1LpNbEddF6XyyA4C1LAzZPLRdMNzVza-ug0DoA8KvS1VHznaMztpEez0AzRysm8qnlBhv1J8hrSGITwuRlZwFc4VVAXUVers9uJylxB1d_eRUbTIOeqwdiFtUbSLZZ6DTYCb6qsDgqfmTTbRbKn8A-7-tilLEaPPZyNdPWpJE6QjfLXLOWEUhG3XVvxSD9jlW1FA14mDi5K5hz');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+    <a class="block h-full flex-1 flex-col gap-2 rounded-lg min-w-36 md:min-w-40 transition-all duration-300 ease-out transform cursor-pointer relative overflow-hidden group" href="#">
+      <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg group-hover:opacity-90 group-hover:shadow-xl group-hover:scale-105" data-alt="Book cover for The Four Winds" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqgwku3RV-RquyfE6aiZTfJVXAVZ1l9WbRVnAZvAzP8rYlTduADXAWPP3DgeMc90BaJUFSY_K4WtI6OlLr7dCsgAQxMPZsYOYdcEnB7LFHxbnXpwI5PzgDWjvJVBRRoReatj0qb_mdUVn_Mc3wfm2trYPUPfZHFHkWdyq7MtEya_N7Uqfw4ZlIwGB75Nkg3kt_lhWc0HORcaxfIsLfWTy0kQ6jbiGxfxbDs543PQwq1JmiLYq4OYbQu8v0wT9pbhz03WhAUNwk5oYM');">
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+      </div>
+    </a>
+  </div>
+  </div>
+  </section>
+  </main>
+  <nav class="fixed bottom-0 left-0 right-0 z-20 flex justify-around bg-background-light/80 dark:bg-background-dark/80 p-2 backdrop-blur-sm border-t border-zinc-200 dark:border-zinc-800">
+  <a class="flex flex-col items-center justify-center text-primary w-1/4" href="#">
+  <span class="material-symbols-outlined !font-bold">home</span>
+  <span class="text-xs font-medium">Início</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-zinc-600 dark:text-zinc-400 w-1/4" href="#">
+  <span class="material-symbols-outlined">collections_bookmark</span>
+  <span class="text-xs font-medium">Biblioteca</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-zinc-600 dark:text-zinc-400 w-1/4" href="#">
+  <span class="material-symbols-outlined">add_circle</span>
+  <span class="text-xs font-medium">Adicionar</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-zinc-600 dark:text-zinc-400 w-1/4" href="#">
+  <span class="material-symbols-outlined">monitoring</span>
+  <span class="text-xs font-medium">Estatísticas</span>
+  </a>
+  </nav>
+  </div>
+  </body>
+</html>
+
