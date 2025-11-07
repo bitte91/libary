@@ -75,54 +75,55 @@
             star: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.39c-.83.069-.98.971-.475 1.502l3.62 3.266-1.006 4.803c-.154.736.64 1.28 1.28.903l4.088-2.399 4.088 2.399c.64.377 1.435-.167 1.28-.903l-1.006-4.803 3.62-3.266c.505-.531.355-1.433-.475-1.502l-4.753-.39-1.83-4.401z" clip-rule="evenodd" /></svg>`,
             share: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.195.025.39.044.586.06.15.014.3.024.453.033s.298.014.448.014c.15 0 .299-.005.448-.014s.302-.019.453-.033c.196-.016.391-.035.586-.06m-2.186 0a2.25 2.25 0 110 2.186m0-2.186c-.195.025-.39.044-.586.06-.15.014-.3.024-.453.033s-.298.014-.448.014c-.15 0-.299-.005-.448-.014s-.302-.019-.453-.033c-.196-.016-.391-.035-.586-.06m0 0a2.25 2.25 0 100 2.186" /></svg>`,
             chevronRight: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>`,
+            arrowLeft: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>`,
+            dotsVertical: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" /></svg>`,
+            adjustments: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>`,
+            questionMark: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>`,
+            logout: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" /></svg>`,
         };
 
         // --- TEMPLATES DAS TELAS ---
-        // Objeto contendo o HTML completo para cada tela
-        const screens = {
-
-            // --- TELA DE HEADERS COMUM (para injetar) ---
-            'commonHead': `
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <script src="https://cdn.tailwindcss.com"></script>
-                <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-                <style type="text/tailwindcss">
-                    @layer base {
-                        body {
-                            font-family: 'Plus Jakarta Sans', sans-serif;
-                            /* Evita que o conteúdo role para baixo da bottom-nav */
-                            padding-bottom: 6rem; /* 4rem (nav) + 2rem (padding) */
-                        }
+        const commonHead = `
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://cdn.tailwindcss.com"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+            <style type="text/tailwindcss">
+                @layer base {
+                    body {
+                        font-family: 'Plus Jakarta Sans', sans-serif;
+                        /* Evita que o conteúdo role para baixo da bottom-nav */
+                        padding-bottom: 6rem; /* 4rem (nav) + 2rem (padding) */
                     }
-                </style>
-                <script>
-                    tailwind.config = {
-                        theme: {
-                            extend: {
-                                colors: {
-                                    'dark-bg': '#1a1a1a',
-                                    'dark-card': '#2d2d2d',
-                                    'primary': '#EAEAEA',
-                                    'secondary': '#888888',
-                                    'accent': '#ec135b',
-                                    'accent-hover': '#d11051',
-                                    'accent-secondary': '#8b5cf6',
-                                }
+                }
+            </style>
+            <script>
+                tailwind.config = {
+                    theme: {
+                        extend: {
+                            colors: {
+                                'dark-bg': '#1a1a1a',
+                                'dark-card': '#2d2d2d',
+                                'primary': '#EAEAEA',
+                                'secondary': '#888888',
+                                'accent': '#ec135b',
+                                'accent-hover': '#d11051',
+                                'accent-secondary': '#8b5cf6',
                             }
                         }
                     }
-                </script>
-            `,
+                }
+            </script>
+        `;
 
-            // --- TELA INICIAL ---
+        const screens = {
             'tela_inicial': `
                 <!DOCTYPE html>
                 <html lang="pt-BR">
                 <head>
-                    ${this.commonHead}
+                    ${commonHead}
                     <title>Início</title>
                 </head>
                 <body class="bg-dark-bg text-primary">
@@ -216,12 +217,11 @@
                 </html>
             `,
 
-            // --- TELA DETALHES DO LIVRO ---
             'detalhes_livro': `
                 <!DOCTYPE html>
                 <html lang="pt-BR">
                 <head>
-                    ${this.commonHead}
+                    ${commonHead}
                     <title>Detalhes do Livro</title>
                 </head>
                 <body class="bg-dark-bg text-primary">
@@ -310,12 +310,11 @@
                 </html>
             `,
 
-            // --- TELA BUSCA DE LIVROS ---
             'busca_livros': `
                 <!DOCTYPE html>
                 <html lang="pt-BR">
                 <head>
-                    ${this.commonHead}
+                    ${commonHead}
                     <title>Busca</title>
                 </head>
                 <body class="bg-dark-bg text-primary">
@@ -400,116 +399,98 @@
                 </html>
             `,
 
-            // --- TELA PERFIL DO USUÁRIO ---
             'perfil_usuario': `
                 <!DOCTYPE html>
                 <html lang="pt-BR">
                 <head>
-                    ${this.commonHead}
+                    ${commonHead}
                     <title>Perfil</title>
                 </head>
                 <body class="bg-dark-bg text-primary">
 
-                    <div class="p-5 space-y-8">
+                    <div class="space-y-6">
+                        <header class="p-5 flex justify-between items-center">
+                            <button class="text-primary">${icons.arrowLeft}</button>
+                            <h1 class="text-xl font-bold">Perfil</h1>
+                            <button class="text-primary">${icons.dotsVertical}</button>
+                        </header>
                         
-                        <section class="text-center space-y-3">
-                            <img src="https://placehold.co/100x100/ec135b/ffffff?text=U" alt="Foto do Perfil" class="w-28 h-28 rounded-full mx-auto border-4 border-accent">
-                            <h1 class="text-2xl font-bold">Usuário Leitor</h1>
-                            <p class="text-secondary">@usuario_leitor</p>
+                        <section class="text-center space-y-2">
+                            <img src="https://i.pravatar.cc/150?u=ana-clara" alt="Foto do Perfil" class="w-24 h-24 rounded-full mx-auto">
+                            <h2 class="text-2xl font-bold">Ana Clara</h2>
+                            <p class="text-secondary">Leitora Apaixonada</p>
                         </section>
 
-                        <section class="bg-dark-card p-4 rounded-lg">
-                            <h2 class="text-lg font-semibold mb-3 text-center">Minhas Estatísticas</h2>
-                            <div class="flex justify-around">
-                                <div class="text-center">
-                                    <span class="text-2xl font-bold text-accent-secondary">128</span>
-                                    <p class="text-secondary text-sm">Livros Lidos</p>
-                                </div>
-                                <div class="text-center">
-                                    <span class="text-2xl font-bold text-accent-secondary">34.5k</span>
-                                    <p class="text-secondary text-sm">Páginas Lidas</p>
-                                </div>
-                                <div class="text-center">
-                                    <span class="text-2xl font-bold text-accent-secondary">210h</span>
-                                    <p class="text-secondary text-sm">Tempo Total</p>
-                                </div>
+                        <section class="px-5 grid grid-cols-2 gap-4">
+                            <div class="bg-dark-card p-4 rounded-lg text-center">
+                                <p class="text-secondary text-sm">Livros Lidos</p>
+                                <p class="text-secondary text-sm">este Ano</p>
+                                <span class="text-3xl font-bold mt-1 block">34</span>
+                            </div>
+                            <div class="bg-dark-card p-4 rounded-lg text-center">
+                                <p class="text-secondary text-sm">Total de Páginas</p>
+                                <p class="text-secondary text-sm">Lidas</p>
+                                <span class="text-3xl font-bold mt-1 block">8,750</span>
+                            </div>
+                            <div class="bg-dark-card p-4 rounded-lg text-center col-span-2">
+                                <p class="text-secondary text-sm">Tempo Médio de Leitura</p>
+                                <span class="text-3xl font-bold mt-1 block">25 min/dia</span>
                             </div>
                         </section>
 
-                        <section class="space-y-4">
-                            <h2 class="text-xl font-semibold">Meus Favoritos</h2>
-                            <div class="flex overflow-x-auto gap-4 pb-2">
-                                <img src="https://placehold.co/100x150/2d2d2d/eaeaea?text=Fav+1" alt="Capa" class="w-24 h-auto rounded-md flex-shrink-0">
-                                <img src="https://placehold.co/100x150/2d2d2d/eaeaea?text=Fav+2" alt="Capa" class="w-24 h-auto rounded-md flex-shrink-0">
-                                <img src="https://placehold.co/100x150/2d2d2d/eaeaea?text=Fav+3" alt="Capa" class="w-24 h-auto rounded-md flex-shrink-0">
-                                <img src="https://placehold.co/100x150/2d2d2d/eaeaea?text=Fav+4" alt="Capa" class="w-24 h-auto rounded-md flex-shrink-0">
-                                <img src="https://placehold.co/100x150/2d2d2d/eaeaea?text=Fav+5" alt="Capa" class="w-24 h-auto rounded-md flex-shrink-0">
+                        <section class="px-5 space-y-3">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold">Meta de Leitura Anual</h3>
+                                <span class="text-secondary text-sm">34 de 50 livros</span>
+                            </div>
+                            <div class="w-full bg-dark-card rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full" style="width: 68%"></div>
                             </div>
                         </section>
 
-                        <section class="space-y-2">
-                            <h2 class="text-xl font-semibold mb-3">Configurações</h2>
-                            <div class="bg-dark-card rounded-lg overflow-hidden">
-                                <a href="#" class="flex justify-between items-center p-4 border-b border-gray-700 hover:bg-gray-700 transition-colors">
-                                    <span>Configurações da Conta</span>
-                                    ${icons.chevronRight}
-                                </a>
-                                <a href="#" class="flex justify-between items-center p-4 border-b border-gray-700 hover:bg-gray-700 transition-colors">
-                                    <span>Notificações</span>
-                                    ${icons.chevronRight}
-                                </a>
-                                <div class="flex justify-between items-center p-4 border-b border-gray-700">
-                                    <span>Tema</span>
-                                    <span class="text-secondary text-sm">Dark</span>
-                                </div>
-                                <a href="#" class="flex justify-between items-center p-4 hover:bg-gray-700 transition-colors">
-                                    <span>Privacidade</span>
-                                    ${icons.chevronRight}
-                                </a>
-                                <a href="#" class="flex justify-between items-center p-4 text-accent hover:bg-gray-700 transition-colors">
-                                    <span>Sair</span>
-                                </a>
+                        <section class="px-5 space-y-3">
+                            <h3 class="text-xl font-semibold">Gêneros Favoritos</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-dark-card text-primary text-sm font-medium px-4 py-2 rounded-full">Ficção Científica</span>
+                                <span class="bg-dark-card text-primary text-sm font-medium px-4 py-2 rounded-full">Fantasia</span>
+                                <span class="bg-dark-card text-primary text-sm font-medium px-4 py-2 rounded-full">Suspense</span>
+                                <span class="bg-dark-card text-primary text-sm font-medium px-4 py-2 rounded-full">Mistério</span>
                             </div>
+                        </section>
+
+                        <section class="px-5 pt-4 space-y-1">
+                            <a href="#" class="flex items-center p-4 hover:bg-dark-card rounded-lg transition-colors">
+                                <span class="text-accent">${icons.profile.replace('w-6 h-6', 'w-5 h-5')}</span>
+                                <span class="ml-4 font-medium">Configurações da Conta</span>
+                                <span class="ml-auto text-secondary">${icons.chevronRight}</span>
+                            </a>
+                            <a href="#" class="flex items-center p-4 hover:bg-dark-card rounded-lg transition-colors">
+                                <span class="text-accent">${icons.adjustments.replace('w-6 h-6', 'w-5 h-5')}</span>
+                                <span class="ml-4 font-medium">Preferências de Leitura</span>
+                                <span class="ml-auto text-secondary">${icons.chevronRight}</span>
+                            </a>
+                            <a href="#" class="flex items-center p-4 hover:bg-dark-card rounded-lg transition-colors">
+                                <span class="text-accent">${icons.questionMark.replace('w-6 h-6', 'w-5 h-5')}</span>
+                                <span class="ml-4 font-medium">Ajuda e Suporte</span>
+                                <span class="ml-auto text-secondary">${icons.chevronRight}</span>
+                            </a>
+                            <a href="#" class="flex items-center p-4 hover:bg-dark-card rounded-lg transition-colors">
+                                <span class="text-accent">${icons.logout.replace('w-6 h-6', 'w-5 h-5')}</span>
+                                <span class="ml-4 font-medium">Sair</span>
+                                <span class="ml-auto text-secondary">${icons.chevronRight}</span>
+                            </a>
                         </section>
 
                     </div>
-
-                    <nav class="fixed bottom-0 left-0 right-0 h-20 bg-dark-card border-t border-gray-700 flex justify-around items-center">
-                        <a href="#" class="flex flex-col items-center text-secondary hover:text-primary">
-                            ${icons.home}
-                            <span class="text-xs mt-1">Início</span>
-                        </a>
-                        <a href="#" class="flex flex-col items-center text-secondary hover:text-primary">
-                            ${icons.search}
-                            <span class="text-xs mt-1">Busca</span>
-                        </a>
-                        <a href="#" class="flex flex-col items-center text-secondary hover:text-primary">
-                            ${icons.library}
-                            <span class="text-xs mt-1">Biblioteca</span>
-                        </a>
-                        <a href="#" class="flex flex-col items-center text-accent">
-                            ${icons.profile}
-                            <span class="text-xs mt-1">Perfil</span>
-                        </a>
-                    </nav>
-
                 </body>
                 </html>
             `
         };
 
-        // --- FUNÇÃO DE CARREGAMENTO ---
-
-        /**
-         * Carrega o HTML de uma tela específica no iframe.
-         * @param {string} screenName O nome da tela (chave do objeto 'screens').
-         */
         function loadFrame(screenName) {
             const frame = document.getElementById('appFrame');
             if (screens[screenName]) {
-                // Remove o commonHead do objeto antes de atribuir, pois ele já foi usado
-                const screenContent = screens[screenName].replace('${this.commonHead}', screens.commonHead);
-                frame.srcdoc = screenContent;
+                frame.srcdoc = screens[screenName];
             } else {
                 console.error(`Tela "${screenName}" não encontrada.`);
                 frame.srcdoc = `<p class="p-4 text-red-500">Erro: Tela "${screenName}" não pôde ser carregada.</p>`;
